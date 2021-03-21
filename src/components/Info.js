@@ -28,14 +28,20 @@ const Info = props => {
           infos.map(info => (
             <div className="flex-cont">
               <div className="flex-div-1">
-                <div><p>Icon</p></div>
+                <div>
+                  <div className="hamburger">
+                    <span />
+                    <span />
+                    <span className="last-bar" />
+                  </div>
+                </div>
                 <div className="scrip-div">
                   <p>{info.Scrip}</p>
                   <p>$<span className="blue">{info.Price}</span></p>
                 </div>
                 <div>
                   <p className="green">iShares<span className="index black">By Bullock</span></p>
-                  <p>S&P</p>
+                  <p className='bg-text'>S&P</p>
                   <p>US Equity</p>
                 </div>
               </div>
