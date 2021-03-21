@@ -1,4 +1,22 @@
+import React, { useCallback, useEffect } from 'react';
+import Axios from 'axios';
+import { API_ID, API_DATA } from '../api/api';
+
 const Info = props => {
+  const fetchData = useCallback(() => {
+  	Axios.get(`${API_ID}${API_DATA}`)
+  	  .then(res => {
+  	  	console.log(res.data);
+  	  })
+  	  .catch(err => {
+  	  	console.log(err);
+  	  })
+  });
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
   return (
     <>
       <div className = "container">
