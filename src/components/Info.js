@@ -29,34 +29,38 @@ const Info = props => {
             <div className="flex-cont">
               <div className="flex-div-1">
                 <div><p>Icon</p></div>
-                <div>
+                <div className="scrip-div">
                   <p>{info.Scrip}</p>
-                  <p>$234</p>
+                  <p>$<span className="blue">{info.Price}</span></p>
                 </div>
                 <div>
-                  <p>iShares<span>By Bullock</span></p>
+                  <p className="green">iShares<span className="index black">By Bullock</span></p>
                   <p>S&P</p>
                   <p>US Equity</p>
                 </div>
               </div>
               <div className="flex-div-2">
-                <p>Quantity <span>${info.Quantity}</span></p>
-                <p>Avg. Cost<span>${info.AvgCost}</span></p>
-                <p>Invested Amt<span>${info['Invested Amount']}</span></p>
+                <p className="fix-wid grey">Quantity <span className="gap black">${info.Quantity}</span></p>
+                <p className="fix-wid grey">Avg. Cost<span className="gap black">${info.AvgCost}</span></p>
+                <p className="fix-wid grey">Invested Amt<span className="gap black">${info['Invested Amount']}</span></p>
               </div>
               <div className="flex-div-3">
-                <p>Market Value<span>${info['Invested Amount']}</span></p>
-                <p>% of portfolio value <span>{info['% of Portfolio Value']}%</span></p>
-                <p>bar</p>
+                <p className="fix-wid">Market Value<span className="gap">${info['Invested Amount']}</span></p>
+                <p className="sm-font fix-wid">% of portfolio value <span className="gap">{info['% of Portfolio Value']}%</span></p>
+                <div className="myProgress">
+                  <div className="myBar"></div>
+                </div>
               </div>
               <div className="flex-div-4">
-                <p>Unrealized P/L<span>${info['Unrealized P&L']}</span></p>
-                <p>% Return <span>{info['% Return']}%</span></p>
-                <p>bar</p>
+                <p className="fix-wid">Unrealized P/L<span className="gap">${info['Unrealized P&L']}</span></p>
+                <p className="fix-wid">% Return <span className="gap">{info['% Return']}%</span></p>
+                <input type="range" min="1" max="100" value="50" className="slider" id="myRange" />
               </div>
               <div className="flex-div-5">
-                <button>BUY</button>
-                <button>SELL</button>
+                <button className="btn">BUY</button>
+                <div>
+                  <button className="btn">SELL</button>
+                </div>
               </div>
             </div>
           ))
