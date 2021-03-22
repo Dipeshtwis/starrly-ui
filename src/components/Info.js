@@ -22,11 +22,11 @@ const Info = props => {
   }, [fetchData]);
 
   return (
-    <>
-      <div className = "container">
+    <div className="container">
+      <div className = "left-cont">
         {
           infos.map(info => (
-            <div className="flex-cont">
+            <div key={info.Scrip} className="flex-cont">
               <div className="flex-div-1">
                 <div>
                   <div className="hamburger">
@@ -72,7 +72,19 @@ const Info = props => {
           ))
         }
       </div>
-    </>
+      <div className="right-cont">
+        <p>Portfolio</p>
+        <div className="progress-circle p66">
+          <span>66%</span>
+          <div className="left-half-clipper">
+            <div className="first50-bar"></div>
+            <div className="value-bar"></div>
+          </div>
+        </div>
+        <div className="square"> <span className="mf">Mutual</span><span className="gap">Fund</span></div>
+        <div className="emf"> <span className="mf">EMF</span></div>
+      </div>
+    </div>
   )
 }
 
