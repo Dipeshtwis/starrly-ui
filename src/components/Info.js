@@ -6,7 +6,7 @@ import { API_ID, API_DATA } from '../api/api';
 
 const Info = props => {
   const { getInfos, infos } = props;
-
+  
   const fetchData = useCallback(() => {
   	Axios.get(`${API_ID}${API_DATA}`)
   	  .then(res => {
@@ -46,15 +46,15 @@ const Info = props => {
                 </div>
               </div>
               <div className="flex-div-2">
-                <p className="fix-wid grey">Quantity <span className="gap black">${info.Quantity}</span></p>
+                <p className="fix-wid grey">Quantity <span className="gap black">{info.Quantity}</span></p>
                 <p className="fix-wid grey">Avg. Cost<span className="gap black">${info.AvgCost}</span></p>
                 <p className="fix-wid grey">Invested Amt<span className="gap black">${info['Invested Amount']}</span></p>
               </div>
               <div className="flex-div-3">
-                <p className="fix-wid">Market Value<span className="gap">${info['Invested Amount']}</span></p>
+                <p className="fix-wid">Market Value<span className="gap">${info.Price * info.Quantity}</span></p>
                 <p className="sm-font fix-wid">% of portfolio value <span className="gap">{info['% of Portfolio Value']}%</span></p>
                 <div className="myProgress">
-                  <div className="myBar"></div>
+                  <div className="myBar" style={{width: info['% of Portfolio Value'] + '%'}}></div>
                 </div>
               </div>
               <div className="flex-div-4">
@@ -74,8 +74,7 @@ const Info = props => {
       </div>
       <div className="right-cont">
         <p>Portfolio</p>
-        <div className="progress-circle p66">
-          <span>66%</span>
+        <div className="progress-circle p22">
           <div className="left-half-clipper">
             <div className="first50-bar"></div>
             <div className="value-bar"></div>

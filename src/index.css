@@ -132,7 +132,6 @@ p {
 }
 
 .myBar {
-  width: 16%;
   height: 16px;
   background-color: #4CAF50;
 }
@@ -179,7 +178,7 @@ p {
    padding: 0;
    width: 5em;
    height: 5em;
-   background-color: #7b9ddb; 
+   background-color: #c4a508; 
    border-radius: 50%;
    line-height: 5em;
 }
@@ -204,7 +203,7 @@ p {
     width: 5em;
     text-align: center;
     display: block;
-    color: #7b9ddb;
+    color: #c4a508;
     z-index: 2;
 }
 .left-half-clipper { 
@@ -228,7 +227,7 @@ p {
    width: 5em;
    height: 5em;
    border-radius: 50%;
-   border: 0.45em solid #c4a508; /*The border is 0.35 but making it larger removes visual artifacts */
+   border: 0.45em solid #7b9ddb; /*The border is 0.35 but making it larger removes visual artifacts */
    /*background-color: #4D642D;*/ /* for debug */
    box-sizing: border-box;
   
@@ -238,7 +237,7 @@ p {
    /*Progress bar for the first 50%, filling the whole right half*/
    position: absolute; /*needed for clipping*/
    clip: rect(0, 5em, 5em, 2.5em);
-   background-color: #c4a508;
+   background-color: #7b9ddb;
    border-radius: 50%;
    width: 5em;
    height: 5em;
